@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "First-Class",
+    "picture": "images/1903Blued32ACP.jpeg",
+    "relese": 2020,
+    "type": "Blued ACP",
+    "location": "Lisco, Alabama"
+  },
+  {
+    "id": 1,
+    "name": "Second-Class",
+    "picture": "images/1903Blued32ACP.jpeg",
+    "relese": 2021,
+    "type": "Blued ACP",
+    "location": "Tooleville, West Virginia"
+  },
+  {
+    "id": 2,
+    "name": "First-Class",
+    "picture": "images/BrightGovernment38S.jpeg",
+    "relese": 2014,
+    "type": "Bright Government",
+    "location": "Freeburn, Idaho"
+  },
+  {
+    "id": 3,
+    "name": "Third-Class",
+    "picture": "images/Python425.jpeg",
+    "relese": 2021,
+    "type": "Python 425",
+    "location": "Camas, Pennsylvania"
+  },
+  {
+    "id": 4,
+    "name": "Secend-Class",
+    "picture": "images/BrightGovernment38S.jpeg",
+    "relese": 2017,
+    "type": "Bright Government",
+    "location": "Gerber, South Dakota"
+  },
+  {
+    "id": 5,
+    "name": "Third-Class",
+    "picture": "images/BrightGovernment38S.jpeg",
+    "relese": 2015,
+    "type": "Bright Government",
+    "location": "Innsbrook, Illinois"
+  },
+  {
+    "id": 6,
+    "name": "First-Class",
+    "picture": "images/CombatEliteDefender.jpeg",
+    "relese": 2021,
+    "type": "Golden Retriever",
+    "location": "Soudan, Louisiana"
+  },
+  {
+    "id": 7,
+    "name": "Coleman",
+    "picture": "images/CombatEliteDefender.jpeg",
+    "relese": 2021,
+    "type": "Golden Retriever",
+    "location": "Jacksonwald, Palau"
+  },
+  {
+    "id": 8,
+    "name": "First-Class",
+    "picture": "images/BrightGovernment38S.jpeg",
+    "relese": 2017,
+    "type": "Bright Government",
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 9,
+    "name": "First-Class",
+    "picture": "images/Python425.jpeg",
+    "relese": 2018,
+    "type": "Python 425",
+    "location": "Matheny, Utah"
+  },
+  {
+    "id": 10,
+    "name": "Secend-Class",
+    "picture": "images/Python425.jpeg",
+    "relese": 2019,
+    "type": "Python 425",
+    "location": "Tyhee, Indiana"
+  },
+  {
+    "id": 11,
+    "name": "Third-Class",
+    "picture": "images/1903Blued32ACP.jpeg",
+    "relese": 2020,
+    "type": "Blued ACP",
+    "location": "Windsor, Montana"
+  },
+  {
+    "id": 12,
+    "name": "Second-Class",
+    "picture": "images/BrightGovernment38S.jpeg",
+    "relese": 2018,
+    "type": "Bright Government",
+    "location": "Kingstowne, Nevada"
+  },
+  {
+    "id": 13,
+    "name": "Third-Class",
+    "picture": "images/CombatEliteDefender.jpeg",
+    "relese": 2020,
+    "type": "Golden Retriever",
+    "location": "Sultana, Massachusetts"
+  },
+  {
+    "id": 14,
+    "name": "First-Class",
+    "picture": "images/CombatEliteDefender.jpeg",
+    "relese": 2019,
+    "type": "Golden Retriever",
+    "location": "Broadlands, Oregon"
+  },
+  {
+    "id": 15,
+    "name": "Second-Class",
+    "picture": "images/CombatEliteDefender.jpeg",
+    "relese": 2020,
+    "type": "Golden Retriever",
+    "location": "Dawn, Wisconsin"
+  }
+]

@@ -1,0 +1,41 @@
+
+							  Requirements
+
+							@BenyaminTeymuri
+
+------------------------------------------------------------------------------------------------------------------------------
+
+1)   install nodeJS ---> (brew install node) node -v
+2)   npm install -g -production windows-build-tools
+3)   npm install -g truffle + Ganache from website + Metamask extention and create account!
+4)   download and Isnatll Ethereum pakage from Package Control
+4)   mkdir Solidity
+5)   npx truffle init      OR install chocolate and use 
+6)   code -
+7)   npx truffle deploy
+8)   npx truffle deploy --reset
+9)   npx truffle network
+10)  npx truffle compile
+11)  npx truffle deploy
+12)  npx truffle create contract TruffleContract
+13)  npx truffle create migration TruffleContract
+14)  npx truffle create test TruffleContract
+15)  npx truffle test 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+16)  npx truffle console
+17)  networks (ctrl+C)
+18)  npx truffle install token
+19)  mkdir reactBox
+20)  cd reactBox
+21)  truffle unbox react
+22)  code .
+23)  truffle deploy
+24)  compile
+25)  migrate
+26)  Open New Terminal & npm run start
+27)  Custom RPC & Metamask Local ADD
+28)  Go to App.Js + (ctrl+G) lone 59
+29)  ctrl+Shift+N and go to http://localhost:3000/
+

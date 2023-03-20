@@ -1,0 +1,95 @@
+
+							Token Create!
+
+							@BenyaminTeymuri
+
+------------------------------------------------------------------------------------------------------------------------------
+
+pragma solidity ^0.4.24;
+
+contract BasicToken is owned{
+    
+    uint public totalSupply;
+    string public name;
+    string public symbol;
+    uint8 public decimals = 18;
+    
+    mapping(address => uint256) public balaceOf;
+    mapping(address => mapping(address => uint256)) public allowence;
+    
+    event Tranfer(address indexed _from, address indexed _to, uint tokens);
+    event Approval(address indexed _tokenOwner, address indexed _spender, uint tokens);
+    
+    constructor(string tokenName, string tokenSymbol, uint initialSupply) public {
+        totalSupply = initialSupply*10*uint256(decimals);
+        balaceOf[msg.sender] = totalSupply;
+        name = tokenName;
+        symbol = tokenSymbol;
+    }
+    
+    function _tranfer(address _from, address _to, uint256 _value) internal {
+        require(_to != 0x0);
+        require(balaceOf[_from] >= _value);
+        require(balaceOf[_to] + _value >= balaceOf[_to]);
+        balaceOf[_from] -= _value;
+        balaceOf[_to] += _value;
+        emit Tranfer(_from, _to, _value);
+    }
+    
+    function tranfer(address _to, uint256 _value) public returns (bool success) {
+        _tranfer(msg.sender, _to, _value);
+        return true;
+    }
+    
+    function tranferFrom(address _from, address _to, uint256 _value) public returns(bool success){
+        require(_value <= allowence[_from][msg.sender]);
+        allowence[_from][msg.sender] -= _value;
+        _tranfer(_from, _to, _value);
+        return true;
+    }
+    
+    function Approve(address _spender, uint256 _value) public returns(bool success){
+        allowence[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+        return true;
+    }
+    
+    function mintToken(address _taget, uint256 _mintedAmount) onlyOwner {
+        balaceOf[_taget] += _mintedAmount;
+        totalSupply += _mintedAmount;
+        emit tranfer(0, owner, _mintedAmount);
+        emit tranfer(owner, _taget, _mintedAmount);
+    }
+    
+    function burn(uint256 _value) onlyOwner returns(bool success){
+        require(balaceOf[msg.success >= _value]);
+        balaceOf[msg.sender] -= _value;
+        totalSupply -= _value;
+        emit Burn(msg.sender, _value);
+        return true;
+    }
+    
+}
+
+
+contract owned{
+    
+    public address owner;
+    
+    constructor{
+        owner = msg.sender;
+    }
+    
+    modifier onlyOwner{
+        require(msg.sender == owner);
+        _;
+    }
+    
+    function tranferOwnership(address newOwner) onlyOwner{
+        owner = newOwner;
+    }
+    
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------

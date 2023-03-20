@@ -1,0 +1,26 @@
+
+							Truffle Tutoria
+
+							@BenyaminTeymuri
+
+------------------------------------------------------------------------------------------------------------------------------
+
+	cd "Documents\Network WorkSpace"
+	cd DAPP
+	mkdir gun-shop
+	cd gun-shop
+	code .
+	Set-ExecutionPolicy RemoteSigned
+	truffle create contract Getting
+	open Ganache and set port in truffle.js	
+	truffle create migration DeployContract
+	truffle deploy --reset
+	truffle deploy
+	truffle network
+	truffle compile
+
+	truffle create test Getting
+	truffle test
+-----------------------------------------------------------------------------------------------------------------------------------
+
+

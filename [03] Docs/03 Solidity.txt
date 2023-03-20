@@ -1,0 +1,237 @@
+
+							Solidity Tutoria
+
+							@BenyaminTeymuri
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+//Firts Contract
+
+
+//version peragma
+pragma solidity ^0.4.24;
+
+
+contract Messenger {
+    
+    address owner;
+    string[] messages;
+    
+    constructor() public {
+        owner = msg.sender;
+    }
+    
+    function add(string newMassage) public {
+        require (msg.sender == owner);
+        messages.push(newMassage);
+    }
+    
+    function count() view public returns(uint) {
+        return messages.length;
+    }
+    
+    function getMassages(uint index) view public returns (string) {
+        return messages[index];
+    } 
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.21;
+
+contract VariableExam {
+    
+    /*bool internal switchedOn = true;
+    address owner = msg.sender;
+    uint8 number = 8;
+    bytes32 awesome1 = "solidity is awesome!";
+    string awesome2 = "solidity is awesome!";
+    bool internal switchedOn = true;*/
+
+    bool public switchedOn = true;
+    address public owner = msg.sender;
+    uint8 public number = 8;
+    bytes32 public awesome1 = "solidity is awesome!";
+    string public awesome2 = "solidity is awesome!";
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.21;
+
+contract OverflowAndUnderflow {
+
+    function overflow() public pure returns(uint256) {
+        uint256 max = 2**256 -1;
+        return max + 1;
+    }
+    
+    function underflow() public pure returns(uint256) {
+        uint256 min = 0;
+        return min - 1;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+contract MessageContract{
+    string private message = "Hello World";
+
+    function getMessage() public constant returns(string){
+	   return message;
+    }
+
+    function setMessage(string newMessage) public {
+	   message = newMessage;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity^0.4.24;
+
+contract Score {
+   uint24[] score;
+
+   function addScore(uint24 s) public returns(uint24[]) {
+       score.push(s);
+       return score;
+   }
+
+   function getLength() view public returns(uint) {
+       return score.length;
+   }   
+
+   function clearArray() public returns(uint24[]) {
+       delete score;
+       return score;
+   }   
+}  
+----------------------------------------------------------------------------------------------------------------
+pragma solidity^0.4.24;
+
+contract SampleContract {
+    uint8[3] nums = [10, 20, 30];
+
+    function getNums() public returns (uint8[3]){
+        nums[0] = 11;
+        nums[1] = 22;
+        nums[2] = 33;
+        return nums;
+    }
+    
+    function getLength() view public returns (uint){
+        return nums.length;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+contract ChangeArrayValue {
+    uint[20] public arr;
+
+    function startChange() public {
+        firstChange(arr);
+        secondChange(arr);
+    }
+
+    function firstChange(uint[20] storage x) internal {
+        x[0] = 4;
+    }
+    
+    function secondChange(uint[20] x) internal pure {
+        x[0] = 3;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+contract Bank {
+    mapping(address => uint) public accounts;
+
+    function deposit(uint money) public {
+       accounts[msg.sender] += money;
+    }
+    
+    function withdraw(uint money) public {
+       accounts[msg.sender] -= money;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+contract SimpleToken {
+  address owner;
+  mapping (address => uint256) public accounts;
+
+  constructor(uint256 initialSupply) public {
+owner = msg.sender;
+  	accounts[owner] = initialSupply;
+  }
+
+  function transfer(address to, uint256 value) public {
+     require(accounts[msg.sender] >= value);
+     require(accounts[to] + value >= accounts[to]);
+     accounts[msg.sender] -= value;
+     accounts[to] += value; 
+  }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+
+contract SmartExchange {
+    
+    event Deposit (address from, bytes32 to, uint indexed value);
+    event Transfer (bytes32 from, address to, uint indexed value);
+    
+    function deposit (bytes32 to) payable public {
+        emit Deposit (msg.sender, to, msg.value);
+        
+    }
+    
+    function transfer (bytes32 from, address to, uint value) payable public {
+        to.transfer (value);
+        emit Transfer (from, to, value);
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.18;
+
+
+contract Coursetro {
+    
+    string fName;
+    uint age;
+    
+    event Instructor (
+        string name,
+        uint age
+    );
+    
+    function setInstructor (string _fName, uint _age) public {
+        fName = _fName;
+        age = _age;
+        
+        Instructor (_fName, _age);
+    }
+    
+    function getInstructor () view public returns (string, uint) {
+        return (fName, age);
+    }
+}
+----------------------------------------------------------------------------------------------------------------
+pragma solidity ^0.4.24;
+
+
+contract Event {
+    
+    event Log (address sender, string massage);
+    event AnotherLog ();
+    
+    function fireEvents () public {
+        emit Log (msg.sender, "Hello World!");
+        emit Log (msg.sender, "Hello EVM!");
+        emit AnotherLog ();
+        
+    }
+
+}
+-----------------------------------------------------------------------------------------------------------------------------------

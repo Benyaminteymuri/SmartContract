@@ -1,0 +1,37 @@
+
+							InFulRa Tutoria
+
+							@BenyaminTeymuri
+
+------------------------------------------------------------------------------------------------------------------------------
+InFulRa SignedUp!
+
+npm install --save truffle-hdwallet-provider
+
+npm install --save dotenv
+
+truffle migrate --network rinkeby
+
+install heroku CLI
+
+Add it to path variable enviroments
+
+Add the dependenth next...
+
+heroku login
+
+git init
+
+heroku git:remote -a "gun-shop"
+
+git add .
+
+git commit -am "initial commit"
+
+git push heroku master 
+
+heroku open
+
+Sure to be on renkiby net
+
+-----------------------------------------------------------------------------------------------------------------------------------
